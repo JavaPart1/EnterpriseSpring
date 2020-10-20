@@ -7,4 +7,7 @@ open module eu.noelvaes.spring{
     requires spring.boot.starter.jdbc;
     requires spring.jdbc;
     requires java.sql;
+    requires java.persistence;
+    requires spring.boot.starter.data.jpa;
+    requires spring.tx;
 }
