@@ -8,7 +8,9 @@ import javax.persistence.*;
 public class Beers {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "Id")
     private int beerId;
+    @Column(name = "Name")
     private String beerName;
     private float price;
     private int stock;
@@ -17,11 +19,11 @@ public class Beers {
     private byte[] image;
 
     @ManyToOne(optional = false, cascade = CascadeType.PERSIST)
-    @JoinColumn
+    @JoinColumn(name = "CategoryId")
     private Category category;
 
     @ManyToOne(optional = false, cascade = CascadeType.PERSIST)
-    @JoinColumn
+    @JoinColumn(name = "BrewerId")
     private Brewer brewer;
 
     public Beers() {

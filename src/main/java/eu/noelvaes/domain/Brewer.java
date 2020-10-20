@@ -9,6 +9,7 @@ import java.util.List;
 public class Brewer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "Id")
     private int brewerId;
     private String brewerName;
     private String address;

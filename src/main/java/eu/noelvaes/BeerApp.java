@@ -1,6 +1,8 @@
 package eu.noelvaes;
 
+import eu.noelvaes.domain.Beers;
 import eu.noelvaes.repositories.BeerDao;
+import eu.noelvaes.repositories.BeerRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -10,8 +12,10 @@ public class BeerApp {
     public static void main(String[] args) {
         ConfigurableApplicationContext ctx =
                 SpringApplication.run(BeerApp.class, args);
-        BeerDao dao = ctx.getBean("beerDao", BeerDao.class);
-        System.out.println(dao.getBeersById(20));
+        BeerRepository br = ctx.getBean("beerRepository", BeerRepository.class);
+        Beers beer = br.getBeerById(20);
+        //BeerDao dao = ctx.getBean("beerDao", BeerDao.class);
+        System.out.println(br.getBeerById(20).toString());
         //dao.setStock(10, 200);
     }
 }

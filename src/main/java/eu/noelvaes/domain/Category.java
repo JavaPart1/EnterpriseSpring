@@ -10,7 +10,9 @@ import java.util.List;
 public class Category implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "Id")
     private int catId;
+    @Column(name = "Category")
     private String catName;
 
     @OneToMany(mappedBy = "category")
