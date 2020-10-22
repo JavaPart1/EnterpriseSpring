@@ -17,11 +17,11 @@ public class BeerDaoImpl implements BeerDao{
     private final static String QUERY_ALC =
             "SELECT Name,Alcohol,Price,Stock FROM Beers WHERE Alcohol=?";
     private JdbcTemplate template;
-
-    @Autowired
-    public void setJdbcTemplate(JdbcTemplate template) {
-        this.template = template;
-    }
+//
+//    @Autowired
+//    public void setJdbcTemplate(JdbcTemplate template) {
+//        this.template = template;
+//    }
 
     @Override
     public String getBeersById(int id) {
