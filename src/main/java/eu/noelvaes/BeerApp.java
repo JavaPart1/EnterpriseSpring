@@ -18,6 +18,5 @@ public class BeerApp {
         //BeerDao dao = ctx.getBean("beerDao", BeerDao.class);
         //dao.setStock(10, 200);
 
-
     }
 }
