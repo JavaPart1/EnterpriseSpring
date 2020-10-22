@@ -10,4 +10,6 @@ open module eu.noelvaes.spring{
     requires java.persistence;
     requires spring.boot.starter.data.jpa;
     requires spring.tx;
+    requires spring.data.jpa;
+    requires spring.data.commons;
 }
