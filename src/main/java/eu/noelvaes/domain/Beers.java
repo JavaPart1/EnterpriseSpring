@@ -1,13 +1,15 @@
 package eu.noelvaes.domain;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @NamedQuery(name = "getAllBeers",query = "select b from Beers as b")
 @NamedQuery(name = "updatePriceBeers",query = "update Beers b set b.price=b.price*:rise")
 @Entity
-public class Beers {
+@Table(name = "Beers")
+public class Beers implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id")
     private int beerId;
     @Column(name = "Name")

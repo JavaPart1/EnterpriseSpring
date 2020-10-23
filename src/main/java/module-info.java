@@ -12,4 +12,8 @@ open module eu.noelvaes.spring{
     requires spring.tx;
     requires spring.data.jpa;
     requires spring.data.commons;
+    requires net.bytebuddy;
+    requires java.annotation;
+    requires org.hibernate.orm.core;
+
 }
